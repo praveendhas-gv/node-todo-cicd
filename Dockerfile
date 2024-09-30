@@ -5,7 +5,11 @@ FROM node:12.2.0-alpine
 WORKDIR /node
 
 #Copy the Code
-COPY . .
+COPY views .
+COPY app.js .
+COPY package-lock.js .
+COPY package.json .
+COPY test.js .
 
 #Install the dependecies
 RUN npm install
